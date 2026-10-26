@@ -208,6 +208,7 @@
   .ledger-move.up{ color: var(--good); }
   .ledger-move.down{ color: var(--crit); }
   .ledger-move.flat{ color: var(--ink-muted); }
+  .ledger-move.wrap{ white-space: normal; max-width: 280px; }
 
   .gk-caveat{
     margin-top: 20px; padding: 14px 16px; border-radius: 10px; background: var(--warn-soft); border: 1px solid color-mix(in srgb, var(--warn) 35%, transparent);
@@ -314,7 +315,7 @@
     </div>
     <div class="meta-block">
       <span class="cycle-tag" id="cycle-tag"><span class="dot live"></span> <strong id="cycle-tag-label">Cycle 2</strong>&nbsp;&middot;&nbsp;<span id="cycle-tag-range">Sep 7&ndash;Oct 4, 2026</span></span>
-      <div class="asof">Tallied figures reflect weekly reports through <strong>Sep 28&ndash;Oct 4</strong> (week 4 of 4, Cycle 2 final) &mdash; all three properties have filed &middot; see report status below. Rally and Individual Recognition run on this 4&#8209;week cycle clock; the Vivere Golden Key runs on a separate, longer quarterly clock (12 weekly reports) &mdash; see the Golden Key section for its own progress.</div>
+      <div class="asof">Tallied figures reflect weekly reports through <strong>Oct 12&ndash;18</strong> (week 2 of 4) &mdash; all three properties have filed &middot; see report status below. Cycles 1 and 2 are closed and kept under &ldquo;Past Cycles&rdquo;. Rally and Individual Recognition run on this 4&#8209;week cycle clock; the Vivere Golden Key runs on a separate, longer quarterly clock (12 weekly reports) &mdash; see the Golden Key section for its own progress.</div>
     </div>
   </header>
 
@@ -322,7 +323,7 @@
   <section id="report-status" style="margin-bottom:28px;">
     <div class="callout muted" style="margin-top:0;">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-      <div><strong>Report status, Cycle 2 final (refreshed Oct 7):</strong> All three properties have filed all four of Cycle 2's weekly reports (Sep 7&ndash;13, Sep 14&ndash;20, Sep 21&ndash;27 and Sep 28&ndash;Oct 4), so the Rally and Individual Recognition tallies below are the final Cycle 2 results, pending GM verification. Cycle 3 (Oct 5&ndash;Nov 1) begins now; Rally and Recognition will reset to zero once its first weekly report is filed. Alabang closed Cycle 2 at 315 of its 200&#8209;review target on the back of a large Google review volume. Amari closed at 90 of 80, clearing its target. Azure closed far behind pace at 7 of 30, with very few new reviews across four weeks. <strong>On the Vivere Golden Key</strong> &mdash; which does <em>not</em> reset at the cycle boundary and keeps accumulating through Cycle 3 before a winner is declared at the 12&#8209;report mark (now week 8 of 12 for Q3 2026) &mdash; Amari still leads QTD with +0.3 pts (Expedia recovered its Cycle 1 dip, +0.2, on top of Google +0.2 doubled and Agoda +0.1 banked in Cycle 1). Alabang slips to +0.1 pts: its Booking.com rating dipped back from 8.6 to 8.5 in Cycle 2 week 4, which erased the +0.1 it had gained in week 1, leaving only Agoda +0.1. Azure remains at 0.0 pts. As before, GM sign-off still governs what's official.</div>
+      <div><strong>Report status, Cycle 3 (refreshed Oct 21):</strong> Cycle 2 is now closed and archived next to Cycle 1 under &ldquo;Past Cycles&rdquo;. <strong>Cycle 2 final (Rally):</strong> Alabang 315 of 200 and Amari 90 of 80 cleared their targets; Azure finished at 7 of 30 and did not earn its fund. <strong>Cycle 3 so far (Oct 5&ndash;Nov 1, weeks 1&ndash;2 filed):</strong> Alabang 159 of 200 (80%, on pace), Amari 59 of 80 (74%, on pace), Azure 7 of 30 (23%, behind pace). <strong>Golden Key (week 10 of 12):</strong> Alabang and Amari are now tied at +0.3 pts &mdash; Alabang gained Google 4.6&rarr;4.7 (doubled, +0.2) in Cycle 3 week 1 and Booking.com 8.5&rarr;8.6 (+0.1) in week 2, while its Agoda gain was given back; Azure fell to &minus;0.6 pts on a Booking.com drop from 10.0 to 9.2, partly offset by Google +0.1 (doubled). <strong>Data flags to verify:</strong> (1) Azure&rsquo;s Booking.com rating moved with no new reviews (still 5) &mdash; likely a score recalculation, so please check the live listing before this is treated as final; (2) Amari&rsquo;s TripAdvisor rating has read 4.9 &ldquo;unchanged&rdquo; in every report since Sep 21 against a launch baseline of 4.8 &mdash; if the live listing confirms 4.9, Amari gains +0.1 and leads outright at +0.4; no points were added in the meantime; (3) Amari&rsquo;s Sep 28&ndash;Oct 4 report repeated the week&#8209;3 review counts in its header, so Cycle 2 week 4 uses the 15 reviews actually listed (the next report&rsquo;s running totals suggest up to 2 more on Google); (4) Azure&rsquo;s Oct 5&ndash;11 report is saved only as a &ldquo;Copy&rdquo; file; (5) an Alabang Oct 19&ndash;25 report is already in SharePoint but that week has not closed, so it was not used. As before, GM sign-off still governs what&rsquo;s official.</div>
     </div>
   </section>
 
@@ -330,6 +331,13 @@
   <section id="cycle-archive-section" style="margin-bottom:28px; display:none;">
     <div class="section-head"><h2 style="font-size:17px">Past Cycles</h2><div class="section-desc">Each cycle runs 4 weekly reports. When a new cycle starts, the previous one's Rally and Individual Recognition final standing is archived here &mdash; click a card to view it in full. The Vivere Golden Key does not close per cycle, so its figures inside an archived cycle are a running quarter-to-date snapshot, not a final result.</div></div>
     <div id="cycle-archive-list" style="display:flex; flex-wrap:wrap; gap:14px;"></div>
+    <div class="card" id="cycle-compare" style="margin-top:18px;">
+      <h3>Cycle by cycle</h3>
+      <div class="card-desc">Rally reviews gained as a share of each cycle&rsquo;s target &mdash; the tick marks 100%, so a bar past it means the target was cleared. The live cycle is shown as it stands today.</div>
+      <div id="cycle-compare-bars"></div>
+      <div class="ledger-title" style="margin-top:22px;">Golden Key points, quarter-to-date, at the close of each cycle</div>
+      <div class="ledger-scroll"><table class="ledger-table" id="cycle-compare-gk" style="min-width:480px;"></table></div>
+    </div>
   </section>
 
   <!-- ================= GOLDEN KEY ================= -->
@@ -356,7 +364,7 @@
 
       <div class="gk-caveat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9L2.7 17.3A1.6 1.6 0 004.1 20h15.8a1.6 1.6 0 001.4-2.7L13.7 3.9a1.6 1.6 0 00-3.4 0z"/></svg>
-        <div><strong>Amari leads the Golden Key, quarter-to-date, at +0.3 pts &mdash; but nothing closes here yet.</strong> Every rating point change adds or deducts as it happens &mdash; a rise adds points, a drop subtracts them, and Google's are doubled as this quarter's Platform of the Quarter &mdash; and points carry forward across cycles without resetting. Amari's Cycle 1 dip on Expedia (&minus;0.2) has since recovered in Cycle 2 week 2 (+0.2), on top of Google's +0.2 (doubled) and Agoda's +0.1 already banked from Cycle 1, for a QTD net of +0.3. Alabang is close behind at +0.2 pts on Agoda and Booking.com ticks from Cycle 2 week 1. Azure is still at 0.0 pts, with no rating movement on any platform since launch. Unlike the Rally and Individual Recognition boards, <strong>this board does not reset when Cycle 2 or Cycle 3 starts</strong> &mdash; it keeps running until the quarter's 12th weekly report, when a winner is finally declared and the board resets for the next quarter (Q4 2026, with Booking.com doubled).</div>
+        <div><strong>Alabang and Amari are tied for the Golden Key, quarter-to-date, at +0.3 pts each &mdash; and nothing closes here yet.</strong> Every rating point change adds or deducts as it happens &mdash; a rise adds points, a drop subtracts them, and Google&rsquo;s are doubled as this quarter&rsquo;s Platform of the Quarter &mdash; and points carry forward across cycles without resetting. Alabang&rsquo;s +0.3 is Google +0.2 (doubled) and Booking.com +0.1. Amari&rsquo;s +0.3 is Google +0.2 (doubled) and Agoda +0.1, with its Expedia dip fully recovered. Azure sits at &minus;0.6 after Booking.com slipped from 10.0 to 9.2, only partly offset by Google +0.2 (doubled). Two weekly reports remain (weeks 11 and 12), and Amari&rsquo;s open TripAdvisor check could separate the leaders. Unlike the Rally and Individual Recognition boards, <strong>this board does not reset when Cycle 3 ends</strong> &mdash; it keeps running until the quarter&rsquo;s 12th weekly report, when a winner is declared and the board resets for the next quarter (Q4 2026, with Booking.com doubled).</div>
       </div>
     </div>
   </section>
@@ -389,7 +397,7 @@
         <ul>
           <li>Named-mention counts are a first pass, not a certified tally &mdash; spelling variants (Anika / Annika, Marco / Marko, Ariane / Arianne) were merged by best judgment. GM sign-off still governs actual payout, as the program specifies.</li>
           <li>Golden Key points use the pre-launch week (Aug 3&ndash;9) as the quarter's starting line, since full scoring went live Aug 10.</li>
-          <li>Cycle 1 (Aug 10&ndash;Sep 6) is closed and archived under "Past Cycles" above; Cycle 2 (Sep 7&ndash;Oct 4) is live, now at week 4 of 4 (Cycle 2 final tally) for all three properties; Cycle 3 starts Oct 5 and will roll over once its first weekly report is filed. The Vivere Golden Key is <strong>not</strong> tied to that cycle boundary &mdash; it kept accumulating straight through the Cycle 1 &rarr; Cycle 2 rollover and will keep doing so through Cycle 3, closing only at the 12&#8209;report quarter mark.</li>
+          <li>Cycle 1 (Aug 10&ndash;Sep 6) and Cycle 2 (Sep 7&ndash;Oct 4) are closed and archived under "Past Cycles" above; Cycle 3 (Oct 5&ndash;Nov 1) is live, currently at week 2 of 4 for all three properties. The Vivere Golden Key is <strong>not</strong> tied to that cycle boundary &mdash; it kept accumulating straight through the Cycle 1 &rarr; 2 &rarr; 3 rollovers, closing only at the 12&#8209;report quarter mark.</li>
         </ul>
       </div>
       <div>
@@ -437,11 +445,11 @@
   function cv(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
 
   var DATA = {
-    cycleNumber: 2,
-    cycleLabel: "Cycle 2",
-    cycleDateRange: "Sep 7–Oct 4, 2026",
-    asOf: "Sep 28–Oct 4, 2026 (week 4 of 4, Cycle 2 final) for all three properties",
-    weeksElapsed: 4,
+    cycleNumber: 3,
+    cycleLabel: "Cycle 3",
+    cycleDateRange: "Oct 5\u2013Nov 1, 2026",
+    asOf: "Oct 12\u201318, 2026 (week 2 of 4) for all three properties",
+    weeksElapsed: 2,
     weeksTotal: 4,
     // --- Quarterly clock (Golden Key ONLY). Golden Key does not reset with each 4-report
     // cycle like Rally / Individual Recognition do -- it runs the full quarter: 12 weekly
@@ -454,23 +462,509 @@
     // out when Cycle 2 started -- it should have carried its +0.1 pts forward from Cycle 1.
     // Fixed below; watch for this class of bug on every future cycle rollover.)
     quarterLabel: "Q3 2026",
-    quarterWeeksElapsed: 8,
+    quarterWeeksElapsed: 10,
     quarterWeeksTotal: 12,
     platformOrder: ["TripAdvisor","Google","Agoda","Booking.com","Expedia"],
     platformOfQuarter: "Google",
     // Completed cycles land here when a new cycle starts (most recent first).
     // Each entry is a full self-contained snapshot: { cycleNumber, cycleLabel, cycleDateRange,
-    // asOf, weeksTotal, platformOrder, platformOfQuarter, properties }. Rally and Individual
-    // Recognition figures inside an archived entry are FINAL for that cycle. Golden Key figures
-    // inside an archived entry are a running quarter-to-date snapshot only -- see
+    // asOf, weeksTotal, weeksElapsed, platformOrder, platformOfQuarter, properties }. Rally and
+    // Individual Recognition figures inside an archived entry are FINAL for that cycle. Golden Key
+    // figures inside an archived entry are a running quarter-to-date snapshot only -- see
     // goldenKeyFinal:false on each entry -- because Golden Key doesn't close with the cycle.
     archivedCycles: [
+      {
+        "cycleNumber": 2,
+        "cycleLabel": "Cycle 2",
+        "cycleDateRange": "Sep 7–Oct 4, 2026",
+        "asOf": "Sep 28–Oct 4, 2026 (week 4 of 4) for all three properties",
+        "weeksTotal": 4,
+        "weeksElapsed": 4,
+        "platformOrder": [
+          "TripAdvisor",
+          "Google",
+          "Agoda",
+          "Booking.com",
+          "Expedia"
+        ],
+        "platformOfQuarter": "Google",
+        "goldenKeyFinal": false,
+        "properties": [
+          {
+            "id": "alabang",
+            "name": "Vivere Hotel Alabang",
+            "shortName": "Alabang",
+            "colorVar": "--prop-alabang",
+            "softVar": "--prop-alabang-soft",
+            "rally": {
+              "target": 200,
+              "fund": 7000,
+              "gained": 315,
+              "byPlatform": {
+                "TripAdvisor": 0,
+                "Google": 273,
+                "Agoda": 30,
+                "Booking.com": 6,
+                "Expedia": 6
+              }
+            },
+            "goldenKey": {
+              "points": 0.1,
+              "byPlatform": {
+                "TripAdvisor": 0,
+                "Google": 0,
+                "Agoda": 0.1,
+                "Booking.com": 0,
+                "Expedia": 0
+              },
+              "ledger": {
+                "TripAdvisor": {
+                  "display": "4.5",
+                  "added": null
+                },
+                "Google": {
+                  "display": "4.6",
+                  "note": "up to 4.7 in Cycle 2 week 1, back down to 4.6 from week 2 &mdash; net flat, QTD"
+                },
+                "Agoda": {
+                  "display": "9.0",
+                  "added": "Cycle 2, week 1 (Sep 7–13)",
+                  "from": "8.9"
+                },
+                "Booking.com": {
+                  "display": "8.5",
+                  "note": "up to 8.6 in Cycle 2 week 1, back to 8.5 in week 4 &mdash; net flat, QTD"
+                },
+                "Expedia": {
+                  "display": "8.8",
+                  "added": null
+                }
+              }
+            },
+            "recognition": [
+              {
+                "name": "Anika",
+                "role": "The Nest &mdash; F&amp;B service",
+                "mentions": 34
+              },
+              {
+                "name": "Lexter",
+                "role": "The Nest &mdash; F&amp;B service",
+                "mentions": 33
+              },
+              {
+                "name": "Harven",
+                "role": "The Nest &mdash; F&amp;B service",
+                "mentions": 26
+              },
+              {
+                "name": "Bon",
+                "role": "The Nest &mdash; F&amp;B service",
+                "mentions": 25
+              },
+              {
+                "name": "Bart",
+                "role": "The Nest &mdash; bar",
+                "mentions": 24
+              },
+              {
+                "name": "Ariane / Arianne",
+                "role": "The Nest &mdash; bar",
+                "mentions": 23
+              },
+              {
+                "name": "McKenzie",
+                "role": "Breakfast service",
+                "mentions": 18
+              },
+              {
+                "name": "Ced",
+                "role": "Breakfast service",
+                "mentions": 17
+              },
+              {
+                "name": "Karl",
+                "role": "The Nest &mdash; F&amp;B service",
+                "mentions": 16
+              },
+              {
+                "name": "Ralph",
+                "role": "The Nest &mdash; F&amp;B service",
+                "mentions": 13
+              },
+              {
+                "name": "Clarisse",
+                "role": "Guest Services / event styling",
+                "mentions": 13
+              },
+              {
+                "name": "John Lee",
+                "role": "The Nest &mdash; F&amp;B service",
+                "mentions": 13
+              },
+              {
+                "name": "Arlo",
+                "role": "Breakfast service",
+                "mentions": 12
+              },
+              {
+                "name": "Dean",
+                "role": "Breakfast service",
+                "mentions": 12
+              },
+              {
+                "name": "Edwin",
+                "role": "The Nest &mdash; F&amp;B service",
+                "mentions": 12
+              },
+              {
+                "name": "Mar",
+                "role": "The Nest &mdash; F&amp;B service",
+                "mentions": 10
+              },
+              {
+                "name": "Marco / Marko",
+                "role": "The Nest &mdash; F&amp;B service",
+                "mentions": 5
+              },
+              {
+                "name": "Rico (Llanza)",
+                "role": "F&amp;B service",
+                "mentions": 4
+              },
+              {
+                "name": "Girlyn",
+                "role": "Reception &mdash; not on HR List",
+                "mentions": 4
+              },
+              {
+                "name": "Ron (Madrigal)",
+                "role": "F&amp;B service",
+                "mentions": 3
+              },
+              {
+                "name": "Sean (Pareras)",
+                "role": "Breakfast service",
+                "mentions": 3
+              },
+              {
+                "name": "Derek (Marajas)",
+                "role": "F&amp;B service",
+                "mentions": 3
+              },
+              {
+                "name": "Marian (Estipona)",
+                "role": "F&amp;B service",
+                "mentions": 2
+              },
+              {
+                "name": "Betty (Myren)",
+                "role": "F&amp;B service",
+                "mentions": 2
+              },
+              {
+                "name": "Christine (Bautista)",
+                "role": "Front Office / Guest Services",
+                "mentions": 2
+              },
+              {
+                "name": "&ldquo;Von&rdquo; (probably Bon)",
+                "role": "Not on HR List &mdash; role to confirm",
+                "mentions": 2
+              },
+              {
+                "name": "MJ (Almaden)",
+                "role": "Front Office",
+                "mentions": 1
+              },
+              {
+                "name": "John (Guerrero)",
+                "role": "Front Office",
+                "mentions": 1
+              },
+              {
+                "name": "Paolo (Laluces)",
+                "role": "Front Office",
+                "mentions": 1
+              },
+              {
+                "name": "Carl (Lanuza)",
+                "role": "Front Office",
+                "mentions": 1
+              },
+              {
+                "name": "Hazuki (Icasiano)",
+                "role": "Front Office",
+                "mentions": 1
+              },
+              {
+                "name": "Khaila (Redito)",
+                "role": "F&amp;B service",
+                "mentions": 1
+              },
+              {
+                "name": "Ayessa (Samia)",
+                "role": "Front Office",
+                "mentions": 1
+              },
+              {
+                "name": "Agot (Serrano)",
+                "role": "EO",
+                "mentions": 1
+              },
+              {
+                "name": "Harold (Sta. Ana)",
+                "role": "Front Office",
+                "mentions": 1
+              },
+              {
+                "name": "Joana (Tama&ntilde;o)",
+                "role": "Front Office",
+                "mentions": 1
+              },
+              {
+                "name": "Lorraine (Tayamora)",
+                "role": "Front Office",
+                "mentions": 1
+              },
+              {
+                "name": "Marvin",
+                "role": "Breakfast &mdash; not on HR List",
+                "mentions": 1
+              },
+              {
+                "name": "Rai",
+                "role": "Breakfast &mdash; not on HR List",
+                "mentions": 1
+              },
+              {
+                "name": "Clark (maybe Karl?)",
+                "role": "Breakfast &mdash; not on HR List",
+                "mentions": 1
+              },
+              {
+                "name": "Laurence",
+                "role": "Not on HR List &mdash; role to confirm",
+                "mentions": 1
+              }
+            ],
+            "recognitionNote": "Final Cycle 2 tally for Alabang: every mention through the week 4 report (Sep 28&ndash;Oct 4), crediting every name in a multi-name review separately (e.g. one Sep 21&ndash;27 Google review thanks 12 staff). Names marked &lsquo;not on HR List&rsquo; are in guest reviews but not in Vivere Hotel&rsquo;s submitted awardee list; Vergel (intern) is excluded. GM sign-off still governs payout."
+          },
+          {
+            "id": "azure",
+            "name": "Vivere Azure Batangas",
+            "shortName": "Azure Batangas",
+            "colorVar": "--prop-azure",
+            "softVar": "--prop-azure-soft",
+            "rally": {
+              "target": 30,
+              "fund": 5000,
+              "gained": 7,
+              "byPlatform": {
+                "TripAdvisor": 0,
+                "Google": 3,
+                "Agoda": 3,
+                "Booking.com": 1,
+                "Expedia": 0
+              }
+            },
+            "goldenKey": {
+              "points": 0.0,
+              "byPlatform": {
+                "TripAdvisor": 0,
+                "Google": 0,
+                "Agoda": 0,
+                "Booking.com": 0,
+                "Expedia": 0
+              },
+              "ledger": {
+                "TripAdvisor": {
+                  "display": "4.7",
+                  "added": null
+                },
+                "Google": {
+                  "display": "4.5",
+                  "added": null
+                },
+                "Agoda": {
+                  "display": "8.6",
+                  "added": null
+                },
+                "Booking.com": {
+                  "display": "10.0",
+                  "added": null
+                },
+                "Expedia": {
+                  "display": "9.0",
+                  "added": null
+                }
+              }
+            },
+            "recognition": []
+          },
+          {
+            "id": "amari",
+            "name": "Amari by Vivere El Nido",
+            "shortName": "Amari El Nido",
+            "colorVar": "--prop-amari",
+            "softVar": "--prop-amari-soft",
+            "rally": {
+              "target": 80,
+              "fund": 6000,
+              "gained": 90,
+              "byPlatform": {
+                "TripAdvisor": 1,
+                "Google": 52,
+                "Agoda": 3,
+                "Booking.com": 28,
+                "Expedia": 6
+              }
+            },
+            "goldenKey": {
+              "points": 0.3,
+              "byPlatform": {
+                "TripAdvisor": 0,
+                "Google": 0.2,
+                "Agoda": 0.1,
+                "Booking.com": 0,
+                "Expedia": 0.0
+              },
+              "ledger": {
+                "TripAdvisor": {
+                  "display": "4.8",
+                  "added": null,
+                  "note": "reports show 4.9 &lsquo;unchanged&rsquo; &mdash; see the open verification flag on the live board"
+                },
+                "Google": {
+                  "display": "4.9",
+                  "added": "Cycle 1, week 4 (Aug 31–Sep 6)",
+                  "from": "4.8"
+                },
+                "Agoda": {
+                  "display": "9.5",
+                  "added": "Cycle 1, week 1 (Aug 10–16)",
+                  "from": "9.4"
+                },
+                "Booking.com": {
+                  "display": "9.4",
+                  "added": null
+                },
+                "Expedia": {
+                  "display": "9.8",
+                  "added": "Cycle 2, week 2 (Sep 14–20)",
+                  "from": "9.6",
+                  "note": "recovered the Cycle 1 week-4 dip (9.8&rarr;9.6&rarr;9.8)"
+                }
+              }
+            },
+            "recognition": [
+              {
+                "name": "Jessa / Jessa Mae",
+                "role": "F&amp;B",
+                "mentions": 11
+              },
+              {
+                "name": "Anna",
+                "role": "F&amp;B",
+                "mentions": 10
+              },
+              {
+                "name": "Christy",
+                "role": "F&amp;B",
+                "mentions": 7
+              },
+              {
+                "name": "Anton",
+                "role": "F&amp;B / Amari Cliff Kitchen",
+                "mentions": 5
+              },
+              {
+                "name": "Steven",
+                "role": "F&amp;B &mdash; team lead",
+                "mentions": 5
+              },
+              {
+                "name": "Kevin",
+                "role": "F&amp;B",
+                "mentions": 4
+              },
+              {
+                "name": "Russel",
+                "role": "Sunset Cruise &mdash; captain",
+                "mentions": 4
+              },
+              {
+                "name": "Prince / Dainsy",
+                "role": "Front Office",
+                "mentions": 4
+              },
+              {
+                "name": "Argel / Arjel",
+                "role": "F&amp;B",
+                "mentions": 3
+              },
+              {
+                "name": "Alexa",
+                "role": "Front Office",
+                "mentions": 3
+              },
+              {
+                "name": "Avelino",
+                "role": "Front Office",
+                "mentions": 2
+              },
+              {
+                "name": "Marian",
+                "role": "Guest Services",
+                "mentions": 2
+              },
+              {
+                "name": "Mary",
+                "role": "Front Desk",
+                "mentions": 2
+              },
+              {
+                "name": "Reggie",
+                "role": "Sunset Cruise crew",
+                "mentions": 2
+              },
+              {
+                "name": "Macmac",
+                "role": "Sunset Cruise &mdash; captain",
+                "mentions": 2
+              },
+              {
+                "name": "Lover",
+                "role": "Front Office / Manager",
+                "mentions": 1
+              },
+              {
+                "name": "Archie",
+                "role": "Airport Transfers",
+                "mentions": 1
+              },
+              {
+                "name": "Jerwin",
+                "role": "Front Office",
+                "mentions": 1
+              },
+              {
+                "name": "Janne",
+                "role": "Front Office",
+                "mentions": 1
+              }
+            ],
+            "recognitionNote": "Final Cycle 2 tally for Amari. Week 4 (Sep 28&ndash;Oct 4) added mentions from two Google reviews; spelling variants merged (Kristy &rarr; Christy, Alixa &rarr; Alexa). That week&rsquo;s report header repeated the week&#8209;3 review counts, so Rally for that week uses the reviews actually listed (6 Google, 6 Booking.com, 2 Agoda, 1 Expedia = 15)."
+          }
+        ]
+      },
       {
         cycleNumber: 1,
         cycleLabel: "Cycle 1",
         cycleDateRange: "Aug 10–Sep 6, 2026",
         asOf: "Aug 31–Sep 6, 2026 (week 4 of 4) for all three properties",
         weeksTotal: 4,
+        weeksElapsed: 4,
         platformOrder: ["TripAdvisor","Google","Agoda","Booking.com","Expedia"],
         platformOfQuarter: "Google",
         goldenKeyFinal: false,
@@ -565,130 +1059,485 @@
     ],
     properties: [
       {
-        id: "alabang",
-        name: "Vivere Hotel Alabang",
-        shortName: "Alabang",
-        colorVar: "--prop-alabang",
-        softVar: "--prop-alabang-soft",
-        rally: { target: 200, fund: 7000, gained: 315,
-          byPlatform: { "TripAdvisor": 0, "Google": 273, "Agoda": 30, "Booking.com": 6, "Expedia": 6 } },
-        goldenKey: { points: 0.1,
-          byPlatform: { "TripAdvisor": 0, "Google": 0.0, "Agoda": 0.1, "Booking.com": 0.0, "Expedia": 0 },
-          ledger: {
-            "TripAdvisor": { display: "4.5", added: null },
-            "Google": { display: "4.6", note: "up to 4.7 in Cycle 2 week 1, back down to 4.6 in week 2 &mdash; net flat, QTD" },
-            "Agoda": { display: "9.0", added: "Cycle 2, week 1 (Sep 7–13)", from: "8.9" },
-            "Booking.com": { display: "8.5", note: "up to 8.6 in Cycle 2 week 1, back down to 8.5 in week 4 &mdash; net flat, QTD" },
-            "Expedia": { display: "8.8", added: null }
-          } },
-        recognition: [
-          { name: "Anika", role: "The Nest &mdash; F&amp;B service", mentions: 34 },
-          { name: "Lexter", role: "The Nest &mdash; F&amp;B service", mentions: 31 },
-          { name: "Harven", role: "The Nest &mdash; F&amp;B service", mentions: 26 },
-          { name: "Bon", role: "The Nest &mdash; F&amp;B service", mentions: 25 },
-          { name: "Bart", role: "The Nest &mdash; bar", mentions: 24 },
-          { name: "Ariane / Arianne", role: "The Nest &mdash; bar", mentions: 23 },
-          { name: "McKenzie", role: "Breakfast service", mentions: 18 },
-          { name: "Ced", role: "Breakfast service", mentions: 17 },
-          { name: "Karl", role: "The Nest &mdash; F&amp;B service", mentions: 16 },
-          { name: "Ralph", role: "The Nest &mdash; F&amp;B service", mentions: 13 },
-          { name: "Clarisse", role: "Guest Services / event styling", mentions: 13 },
-          { name: "John Lee / Johnny / Johnly", role: "The Nest &mdash; F&amp;B service", mentions: 13 },
-          { name: "Arlo", role: "Breakfast service", mentions: 12 },
-          { name: "Dean", role: "Breakfast service", mentions: 12 },
-          { name: "Edwin", role: "The Nest &mdash; F&amp;B service", mentions: 12 },
-          { name: "Mar", role: "The Nest &mdash; F&amp;B service", mentions: 10 },
-          { name: "Marco / Marko", role: "The Nest &mdash; F&amp;B service", mentions: 5 },
-          { name: "Ron", role: "The Nest &mdash; F&amp;B service", mentions: 3 },
-          { name: "Sean", role: "Breakfast service", mentions: 3 },
-          { name: "Derek", role: "The Nest &mdash; F&amp;B service", mentions: 2 },
-          { name: "Marian", role: "Guest Services", mentions: 2 },
-          { name: "Lester", role: "Guest Services", mentions: 2 },
-          { name: "Rico", role: "The Nest &mdash; F&amp;B service", mentions: 1 },
-          { name: "Vergel", role: "The Nest &mdash; F&amp;B service", mentions: 1 },
-          { name: "Bethy", role: "The Nest &mdash; F&amp;B service", mentions: 1 },
-          { name: "Carl", role: "Guest Services", mentions: 1 },
-          { name: "Lorraine", role: "Guest Services", mentions: 1 },
-          { name: "MJ", role: "Guest Services", mentions: 1 },
-          { name: "Kristine", role: "Guest Services", mentions: 1 },
-          { name: "Khaila", role: "Guest Services", mentions: 1 },
-          { name: "Paolo", role: "Guest Services", mentions: 1 },
-          { name: "Ayessa", role: "Guest Services", mentions: 1 },
-          { name: "Joana", role: "Guest Services", mentions: 1 },
-          { name: "John", role: "Front Office / GSO", mentions: 1 },
-          { name: "Harold", role: "Front Office / GSO", mentions: 1 },
-          { name: "Hazuki", role: "Guest Services", mentions: 1 },
-          { name: "Agot", role: "Guest Services", mentions: 1 }
-        ]
+        "id": "alabang",
+        "name": "Vivere Hotel Alabang",
+        "shortName": "Alabang",
+        "colorVar": "--prop-alabang",
+        "softVar": "--prop-alabang-soft",
+        "rally": {
+          "target": 200,
+          "fund": 7000,
+          "gained": 159,
+          "byPlatform": {
+            "TripAdvisor": 1,
+            "Google": 139,
+            "Agoda": 9,
+            "Booking.com": 2,
+            "Expedia": 8
+          }
+        },
+        "goldenKey": {
+          "points": 0.3,
+          "byPlatform": {
+            "TripAdvisor": 0,
+            "Google": 0.2,
+            "Agoda": 0,
+            "Booking.com": 0.1,
+            "Expedia": 0
+          },
+          "ledger": {
+            "TripAdvisor": {
+              "display": "4.5",
+              "added": null
+            },
+            "Google": {
+              "display": "4.7",
+              "added": "Cycle 3, week 1 (Oct 5–11)",
+              "from": "4.6"
+            },
+            "Agoda": {
+              "display": "8.9",
+              "note": "9.0 in Cycle 2 weeks 1&ndash;4, back to 8.9 in Cycle 3 week 2 &mdash; net flat, QTD"
+            },
+            "Booking.com": {
+              "display": "8.6",
+              "added": "Cycle 3, week 2 (Oct 12–18)",
+              "from": "8.5"
+            },
+            "Expedia": {
+              "display": "8.8",
+              "added": null
+            }
+          }
+        },
+        "recognition": [
+          {
+            "name": "Bart",
+            "role": "The Nest &mdash; bar / breakfast",
+            "mentions": 22
+          },
+          {
+            "name": "Lexter",
+            "role": "The Nest &mdash; F&amp;B service",
+            "mentions": 21
+          },
+          {
+            "name": "Arlo",
+            "role": "Breakfast service",
+            "mentions": 18
+          },
+          {
+            "name": "Marco / Marko",
+            "role": "The Nest &mdash; F&amp;B service",
+            "mentions": 16
+          },
+          {
+            "name": "Anika",
+            "role": "The Nest &mdash; F&amp;B service",
+            "mentions": 15
+          },
+          {
+            "name": "Harven",
+            "role": "The Nest &mdash; F&amp;B service",
+            "mentions": 12
+          },
+          {
+            "name": "Mar",
+            "role": "The Nest &mdash; F&amp;B service",
+            "mentions": 12
+          },
+          {
+            "name": "Edwin",
+            "role": "The Nest &mdash; F&amp;B service",
+            "mentions": 9
+          },
+          {
+            "name": "Ariane / Arianne",
+            "role": "The Nest &mdash; bar",
+            "mentions": 8
+          },
+          {
+            "name": "John Lee",
+            "role": "The Nest &mdash; F&amp;B service",
+            "mentions": 7
+          },
+          {
+            "name": "Kate",
+            "role": "Breakfast &mdash; role to confirm",
+            "mentions": 7
+          },
+          {
+            "name": "McKenzie",
+            "role": "Breakfast service",
+            "mentions": 7
+          },
+          {
+            "name": "Ced",
+            "role": "Breakfast service",
+            "mentions": 5
+          },
+          {
+            "name": "Ron (Madrigal)",
+            "role": "F&amp;B service",
+            "mentions": 5
+          },
+          {
+            "name": "Clarisse",
+            "role": "Guest Services / event styling",
+            "mentions": 4
+          },
+          {
+            "name": "Rico (Llanza)",
+            "role": "F&amp;B service",
+            "mentions": 4
+          },
+          {
+            "name": "Dean",
+            "role": "Breakfast service",
+            "mentions": 4
+          },
+          {
+            "name": "Karl",
+            "role": "The Nest &mdash; F&amp;B service",
+            "mentions": 3
+          },
+          {
+            "name": "Joshua",
+            "role": "Breakfast / dining &mdash; role to confirm",
+            "mentions": 3
+          },
+          {
+            "name": "Alfie",
+            "role": "Role to confirm",
+            "mentions": 3
+          },
+          {
+            "name": "Francis (Owen)",
+            "role": "Concierge Supervisor &mdash; per guest reviews",
+            "mentions": 2
+          },
+          {
+            "name": "Ralph",
+            "role": "The Nest &mdash; F&amp;B service",
+            "mentions": 2
+          },
+          {
+            "name": "Freddie",
+            "role": "Role to confirm",
+            "mentions": 2
+          },
+          {
+            "name": "Khaila (Redito)",
+            "role": "F&amp;B service",
+            "mentions": 2
+          },
+          {
+            "name": "Marian (Estipona)",
+            "role": "F&amp;B service",
+            "mentions": 2
+          },
+          {
+            "name": "Jenny",
+            "role": "Role to confirm",
+            "mentions": 2
+          },
+          {
+            "name": "Ria",
+            "role": "Breakfast &mdash; role to confirm",
+            "mentions": 2
+          },
+          {
+            "name": "Danielle",
+            "role": "Front Office",
+            "mentions": 2
+          },
+          {
+            "name": "Allan",
+            "role": "Role to confirm",
+            "mentions": 2
+          },
+          {
+            "name": "Bon",
+            "role": "The Nest &mdash; F&amp;B service",
+            "mentions": 1
+          },
+          {
+            "name": "Derek (Marajas)",
+            "role": "F&amp;B service",
+            "mentions": 1
+          },
+          {
+            "name": "MJ (Almaden)",
+            "role": "Front Office",
+            "mentions": 1
+          },
+          {
+            "name": "Marvin",
+            "role": "Breakfast &mdash; not on HR List",
+            "mentions": 1
+          },
+          {
+            "name": "Verde",
+            "role": "Role to confirm",
+            "mentions": 1
+          },
+          {
+            "name": "Jerica",
+            "role": "Role to confirm",
+            "mentions": 1
+          },
+          {
+            "name": "Kim",
+            "role": "Role to confirm",
+            "mentions": 1
+          },
+          {
+            "name": "Audrey",
+            "role": "Housekeeping &mdash; per guest review",
+            "mentions": 1
+          },
+          {
+            "name": "Khrys",
+            "role": "Role to confirm",
+            "mentions": 1
+          },
+          {
+            "name": "Abby",
+            "role": "Role to confirm",
+            "mentions": 1
+          },
+          {
+            "name": "Genny",
+            "role": "Role to confirm",
+            "mentions": 1
+          },
+          {
+            "name": "Jaf",
+            "role": "Role to confirm",
+            "mentions": 1
+          },
+          {
+            "name": "Princess",
+            "role": "Role to confirm",
+            "mentions": 1
+          }
+        ],
+        "recognitionNote": "Cycle 3 so far: every name mention through the week 2 report (Oct 12&ndash;18), across Google, TripAdvisor, Trust You and Expedia text; every name in a multi-name review is credited separately. Spelling variants merged (Harvey/Harvin &rarr; Harven, Annika/Anica &rarr; Anika, Mackenzie &rarr; McKenzie, Johnly &rarr; John Lee, Mark &rarr; Marco/Marko). One Google review (Willie, Steph &amp; Ana Robinson) was reported in both weeks and is counted once for recognition. Vergel (intern) is excluded. Names marked &lsquo;role to confirm&rsquo; are not yet matched to the HR awardee list. GM sign-off still governs payout."
       },
       {
-        id: "azure",
-        name: "Vivere Azure Batangas",
-        shortName: "Azure Batangas",
-        colorVar: "--prop-azure",
-        softVar: "--prop-azure-soft",
-        rally: { target: 30, fund: 5000, gained: 7,
-          byPlatform: { "TripAdvisor": 0, "Google": 3, "Agoda": 3, "Booking.com": 1, "Expedia": 0 } },
-        goldenKey: { points: 0.0,
-          byPlatform: { "TripAdvisor": 0, "Google": 0, "Agoda": 0, "Booking.com": 0, "Expedia": 0 },
-          ledger: {
-            "TripAdvisor": { display: "4.7", added: null },
-            "Google": { display: "4.5", added: null },
-            "Agoda": { display: "8.6", added: null },
-            "Booking.com": { display: "10.0", added: null },
-            "Expedia": { display: "9.0", added: null }
-          } },
-        recognition: []
+        "id": "azure",
+        "name": "Vivere Azure Batangas",
+        "shortName": "Azure Batangas",
+        "colorVar": "--prop-azure",
+        "softVar": "--prop-azure-soft",
+        "rally": {
+          "target": 30,
+          "fund": 5000,
+          "gained": 7,
+          "byPlatform": {
+            "TripAdvisor": 1,
+            "Google": 4,
+            "Agoda": 2,
+            "Booking.com": 0,
+            "Expedia": 0
+          }
+        },
+        "goldenKey": {
+          "points": -0.6,
+          "byPlatform": {
+            "TripAdvisor": 0,
+            "Google": 0.2,
+            "Agoda": 0,
+            "Booking.com": -0.8,
+            "Expedia": 0
+          },
+          "ledger": {
+            "TripAdvisor": {
+              "display": "4.7",
+              "added": null
+            },
+            "Google": {
+              "display": "4.6",
+              "added": "Cycle 3, week 1 (Oct 5–11)",
+              "from": "4.5"
+            },
+            "Agoda": {
+              "display": "8.6",
+              "added": null
+            },
+            "Booking.com": {
+              "display": "9.2",
+              "dropped": "Cycle 3, week 1 (Oct 5–11)",
+              "from": "10.0",
+              "note": "no new reviews (still 5) &mdash; verify live listing"
+            },
+            "Expedia": {
+              "display": "9.0",
+              "added": null
+            }
+          }
+        },
+        "recognition": [],
+        "recognitionNote": "No staff names appeared in Azure&rsquo;s guest reviews in Cycle 3 so far."
       },
       {
-        id: "amari",
-        name: "Amari by Vivere El Nido",
-        shortName: "Amari El Nido",
-        colorVar: "--prop-amari",
-        softVar: "--prop-amari-soft",
-        rally: { target: 80, fund: 6000, gained: 90,
-          byPlatform: { "TripAdvisor": 1, "Google": 52, "Agoda": 3, "Booking.com": 28, "Expedia": 6 } },
-        goldenKey: { points: 0.3,
-          byPlatform: { "TripAdvisor": 0, "Google": 0.2, "Agoda": 0.1, "Booking.com": 0, "Expedia": 0.0 },
-          ledger: {
-            "TripAdvisor": { display: "4.8", added: null },
-            "Google": { display: "4.9", added: "Cycle 1, week 4 (Aug 31–Sep 6)", from: "4.8" },
-            "Agoda": { display: "9.5", added: "Cycle 1, week 1 (Aug 10–16)", from: "9.4" },
-            "Booking.com": { display: "9.4", added: null },
-            "Expedia": { display: "9.8", added: "Cycle 2, week 2 (Sep 14–20)", from: "9.6", note: "recovered the Cycle 1 week-4 dip (9.8&rarr;9.6&rarr;9.8); QTD net across the quarter so far is Google +0.2 (doubled), Agoda +0.1, Expedia 0.0" }
-          } },
-        recognition: [
-          { name: "Jessa / Jessa Mae", role: "F&amp;B", mentions: 10 },
-          { name: "Anna", role: "F&amp;B", mentions: 9 },
-          { name: "Christy / Christi / Kristy", role: "F&amp;B", mentions: 7 },
-          { name: "Anton", role: "F&amp;B / Amari Cliff Kitchen", mentions: 5 },
-          { name: "Kevin", role: "F&amp;B", mentions: 5 },
-          { name: "Russel", role: "Sunset Cruise &mdash; captain", mentions: 4 },
-          { name: "Steven", role: "F&amp;B &mdash; team lead", mentions: 4 },
-          { name: "Alyssa", role: "Front Desk", mentions: 4 },
-          { name: "Prince / Dainsy", role: "Front Office", mentions: 4 },
-          { name: "Alex", role: "F&amp;B", mentions: 3 },
-          { name: "Arjel / Argel", role: "F&amp;B", mentions: 3 },
-          { name: "Reggie", role: "Sunset Cruise crew", mentions: 2 },
-          { name: "Macmac", role: "Sunset Cruise &mdash; captain", mentions: 2 },
-          { name: "Avelino", role: "Front Office", mentions: 2 },
-          { name: "Marian", role: "Guest Services", mentions: 2 },
-          { name: "Mary", role: "Front Office", mentions: 2 },
-          { name: "Eric", role: "General Manager", mentions: 2 },
-          { name: "Alixa", role: "F&amp;B", mentions: 2 },
-          { name: "Lailanie", role: "Front Office", mentions: 1 },
-          { name: "Lover", role: "Front Office / Manager", mentions: 1 },
-          { name: "Archie", role: "Airport Transfers", mentions: 1 },
-          { name: "Jerwin", role: "Front Office", mentions: 1 },
-          { name: "Janne", role: "Front Office", mentions: 1 },
-          { name: "Alexa", role: "Front Office", mentions: 1 },
-          { name: "Ryan", role: "Guest Services &mdash; shuttle", mentions: 1 },
-          { name: "Abeng", role: "Guest Services", mentions: 1 },
-          { name: "Lai", role: "Guest Services", mentions: 1 },
-          { name: "Larva", role: "Guest Services", mentions: 1 },
-          { name: "Andrew", role: "Guest Services", mentions: 1 },
-          { name: "Noy", role: "Tours", mentions: 1 }
-        ]
+        "id": "amari",
+        "name": "Amari by Vivere El Nido",
+        "shortName": "Amari El Nido",
+        "colorVar": "--prop-amari",
+        "softVar": "--prop-amari-soft",
+        "rally": {
+          "target": 80,
+          "fund": 6000,
+          "gained": 59,
+          "byPlatform": {
+            "TripAdvisor": 2,
+            "Google": 33,
+            "Agoda": 1,
+            "Booking.com": 23,
+            "Expedia": 0
+          }
+        },
+        "goldenKey": {
+          "points": 0.3,
+          "byPlatform": {
+            "TripAdvisor": 0,
+            "Google": 0.2,
+            "Agoda": 0.1,
+            "Booking.com": 0,
+            "Expedia": 0.0
+          },
+          "ledger": {
+            "TripAdvisor": {
+              "display": "4.8",
+              "added": null,
+              "note": "open flag: reports read 4.9, launch baseline 4.8 &mdash; verify live listing; no points added yet"
+            },
+            "Google": {
+              "display": "4.9",
+              "added": "Cycle 1, week 4 (Aug 31–Sep 6)",
+              "from": "4.8"
+            },
+            "Agoda": {
+              "display": "9.5",
+              "added": "Cycle 1, week 1 (Aug 10–16)",
+              "from": "9.4"
+            },
+            "Booking.com": {
+              "display": "9.4",
+              "added": null
+            },
+            "Expedia": {
+              "display": "9.8",
+              "added": "Cycle 2, week 2 (Sep 14–20)",
+              "from": "9.6",
+              "note": "recovered the Cycle 1 week-4 dip (9.8&rarr;9.6&rarr;9.8)"
+            }
+          }
+        },
+        "recognition": [
+          {
+            "name": "Christy",
+            "role": "F&amp;B",
+            "mentions": 11
+          },
+          {
+            "name": "Prince / Dainsy",
+            "role": "Front Office",
+            "mentions": 11
+          },
+          {
+            "name": "Anton",
+            "role": "F&amp;B / Amari Cliff Kitchen",
+            "mentions": 7
+          },
+          {
+            "name": "Anna",
+            "role": "F&amp;B",
+            "mentions": 6
+          },
+          {
+            "name": "Steven",
+            "role": "F&amp;B &mdash; team lead",
+            "mentions": 6
+          },
+          {
+            "name": "Kevin",
+            "role": "F&amp;B",
+            "mentions": 6
+          },
+          {
+            "name": "Avelino",
+            "role": "Front Office",
+            "mentions": 5
+          },
+          {
+            "name": "Alexa",
+            "role": "Front Office",
+            "mentions": 5
+          },
+          {
+            "name": "Joel / Joelle",
+            "role": "Role to confirm",
+            "mentions": 5
+          },
+          {
+            "name": "Jessa / Jessa Mae",
+            "role": "F&amp;B",
+            "mentions": 4
+          },
+          {
+            "name": "Argel",
+            "role": "F&amp;B",
+            "mentions": 4
+          },
+          {
+            "name": "Lover",
+            "role": "Front Office / Manager",
+            "mentions": 3
+          },
+          {
+            "name": "Lailanie",
+            "role": "Front Office",
+            "mentions": 2
+          },
+          {
+            "name": "Russel",
+            "role": "Sunset Cruise &mdash; captain",
+            "mentions": 1
+          },
+          {
+            "name": "Jerwin",
+            "role": "Front Office",
+            "mentions": 1
+          },
+          {
+            "name": "Marian",
+            "role": "Guest Services",
+            "mentions": 1
+          },
+          {
+            "name": "Janne",
+            "role": "Front Office",
+            "mentions": 1
+          },
+          {
+            "name": "Jane",
+            "role": "Front Office",
+            "mentions": 1
+          },
+          {
+            "name": "Juls",
+            "role": "Airport pickup &mdash; role to confirm",
+            "mentions": 1
+          },
+          {
+            "name": "Jerica (Chef)",
+            "role": "Kitchen &mdash; role to confirm",
+            "mentions": 1
+          }
+        ],
+        "recognitionNote": "Cycle 3 so far: every name mention through the week 2 report (Oct 12&ndash;18). Spelling variants merged (Cristi/Cristy &rarr; Christy, Alixa &rarr; Alexa, Aven &rarr; Avelino, Argerl &rarr; Argel). A bare &lsquo;Alex&rsquo; and an unsure &lsquo;Francz&rsquo; were not credited. &lsquo;Prince Jerwin&rsquo; in one review is credited to Jerwin. Prince and Dainsy, when named together in one review, count once. GM sign-off still governs payout."
       }
     ]
   };
@@ -698,6 +1547,7 @@
     var gkBoard = document.getElementById(ids.gkBoard);
     gkBoard.innerHTML = "";
     var ranked = cycle.properties.slice().sort(function(a,b){ return b.goldenKey.points - a.goldenKey.points; });
+    var tiedAtTop = ranked.filter(function(r){ return r.goldenKey.points === ranked[0].goldenKey.points; }).length;
     ranked.forEach(function(p, i){
       var row = document.createElement("div");
       row.className = "gk-row";
@@ -707,7 +1557,7 @@
         return '<span>' + pl + ' ' + sign + v.toFixed(1) + (pl === cycle.platformOfQuarter ? ' ×2' : '') + '</span>';
       }).join("");
       row.innerHTML =
-        '<div class="rank">No. ' + (i+1) + (p.goldenKey.points === ranked[0].goldenKey.points ? ' &mdash; holding the Key' : '') + '</div>' +
+        '<div class="rank">No. ' + (i+1) + (p.goldenKey.points === ranked[0].goldenKey.points ? (tiedAtTop > 1 ? ' &mdash; tied for the Key' : ' &mdash; holding the Key') : '') + '</div>' +
         '<div class="propname"><span class="swatch" style="background:' + cv(p.colorVar) + '"></span>' + p.name + '</div>' +
         '<div class="points">' + (p.goldenKey.points >= 0 ? '+' : '') + p.goldenKey.points.toFixed(1) + ' <small>pts gained, QTD</small></div>' +
         '<div class="gk-platform-list">' + chips + '</div>';
@@ -728,9 +1578,12 @@
         } else if (L.dropped){
           moveHtml = '<span class="ledger-move down">' + (parseFloat(L.display) - parseFloat(L.from)).toFixed(1) + ' &middot; ' + L.dropped + '</span>';
         } else if (L.note){
-          moveHtml = '<span class="ledger-move flat">' + L.note + '</span>';
+          moveHtml = '<span class="ledger-move flat wrap">' + L.note + '</span>';
         } else {
           moveHtml = '<span class="ledger-move flat">no change since launch</span>';
+        }
+        if ((L.added || L.dropped) && L.note){
+          moveHtml += '<span class="ledger-move flat" style="white-space:normal; max-width:260px;">' + L.note + '</span>';
         }
         return '<td><span class="ledger-rating num">' + L.display + '</span>' + moveHtml + '</td>';
       }).join("");
@@ -774,7 +1627,11 @@
   function pct(n, d){ return Math.max(0, Math.min(100, (n/d)*100)); }
 
   function paceStatus(p, cycle){
-    var pace = (cycle.weeksElapsed / cycle.weeksTotal) * 100;
+    var wkNow = cycle.weeksElapsed || cycle.weeksTotal;
+    if (wkNow >= cycle.weeksTotal){
+      return p.rally.gained >= p.rally.target ? { label: "Target hit", cls: "good" } : { label: "Target missed", cls: "crit" };
+    }
+    var pace = (wkNow / cycle.weeksTotal) * 100;
     var actual = pct(p.rally.gained, p.rally.target);
     var diff = actual - pace;
     if (diff >= -5) return { label: "On pace", cls: "good" };
@@ -783,7 +1640,9 @@
   }
 
   function renderPropertyPanel(p, cycle){
-    var pace = (cycle.weeksElapsed / cycle.weeksTotal) * 100;
+    var wkNow = cycle.weeksElapsed || cycle.weeksTotal;
+    var closed = wkNow >= cycle.weeksTotal;
+    var pace = (wkNow / cycle.weeksTotal) * 100;
     var actualPct = pct(p.rally.gained, p.rally.target);
     var status = paceStatus(p, cycle);
     var color = cv(p.colorVar);
@@ -821,15 +1680,16 @@
             '<div class="progress-pace-mark" style="left:' + pace + '%" title="Expected pace"></div>' +
             '<div class="progress-fill" style="width:' + actualPct + '%; background:' + color + '"></div>' +
           '</div>' +
-          '<div class="progress-labels"><span>Week ' + cycle.weeksElapsed + ' of ' + cycle.weeksTotal + ' &middot; pace marker at ' + Math.round(pace) + '%</span><span>Target: ' + p.rally.target + '/cycle</span></div>' +
+          '<div class="progress-labels"><span>' + (closed ? 'Cycle closed &middot; ' : '') + 'Week ' + wkNow + ' of ' + cycle.weeksTotal + ' &middot; pace marker at ' + Math.round(pace) + '%</span><span>Target: ' + p.rally.target + '/cycle</span></div>' +
           '<div class="platform-bars">' + platformBars + '</div>' +
-          '<div class="fund-line"><span>Team treat fund on the line</span><span class="amt num">₱' + p.rally.fund.toLocaleString() + '</span></div>' +
+          '<div class="fund-line"><span>' + (closed ? (p.rally.gained >= p.rally.target ? 'Team treat fund earned (pending GM sign-off)' : 'Team treat fund not earned &mdash; target missed') : 'Team treat fund on the line') + '</span><span class="amt num">₱' + p.rally.fund.toLocaleString() + '</span></div>' +
         '</div>' +
 
         '<div class="card">' +
           '<h3>Individual Recognition</h3>' +
           '<div class="card-desc">Auto&#8209;extracted named mentions in guest reviews this cycle &middot; pending GM verification</div>' +
           '<div>' + lb + '</div>' +
+          (p.recognitionNote ? '<div class="callout muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><div>' + p.recognitionNote + '</div></div>' : '') +
         '</div>' +
       '</div>';
   }
@@ -856,7 +1716,9 @@
   if (DATA.archivedCycles && DATA.archivedCycles.length){
     archiveSection.style.display = "";
     DATA.archivedCycles.forEach(function(cyc){
-      var goldenKeyLeader = cyc.properties.slice().sort(function(a,b){ return b.goldenKey.points - a.goldenKey.points; })[0];
+      var gkSorted = cyc.properties.slice().sort(function(a,b){ return b.goldenKey.points - a.goldenKey.points; });
+      var goldenKeyLeader = gkSorted[0];
+      var rallyHits = cyc.properties.filter(function(p){ return p.rally.gained >= p.rally.target; }).length;
       var gkLineLabel = cyc.goldenKeyFinal === false
         ? "Golden Key QTD leader (not final): "
         : "Held the Key: ";
@@ -869,12 +1731,59 @@
           '<h3 style="margin:0;">' + cyc.cycleLabel + '</h3>' +
           '<span class="card-desc">' + cyc.cycleDateRange + '</span>' +
         '</div>' +
-        '<div class="card-desc" style="margin-top:6px;">' + gkLineLabel + '<strong>' + goldenKeyLeader.name + '</strong> (+' + goldenKeyLeader.goldenKey.points.toFixed(1) + ' pts)</div>' +
+        '<div class="card-desc" style="margin-top:6px;">Rally target hit: <strong>' + rallyHits + ' of ' + cyc.properties.length + '</strong> properties</div>' +
+        '<div class="card-desc" style="margin-top:4px;">' + gkLineLabel + '<strong>' + goldenKeyLeader.name + '</strong> (+' + goldenKeyLeader.goldenKey.points.toFixed(1) + ' pts)</div>' +
         '<div class="card-desc" style="margin-top:10px; color:var(--accent-gold-strong); font-weight:600;">View full cycle &rarr;</div>';
       card.addEventListener("click", function(){ openCycleModal(cyc); });
       archiveList.appendChild(card);
     });
   }
+
+
+  // ---------------- Cycle-by-cycle comparison (archived cycles + live cycle) ----------------
+  (function(){
+    var barsEl = document.getElementById("cycle-compare-bars");
+    var gkEl = document.getElementById("cycle-compare-gk");
+    if (!barsEl || !gkEl) return;
+    var cycles = (DATA.archivedCycles || []).slice().sort(function(a,b){ return a.cycleNumber - b.cycleNumber; }).concat([DATA]);
+    var maxPct = 100;
+    cycles.forEach(function(c){ c.properties.forEach(function(p){ maxPct = Math.max(maxPct, (p.rally.gained / p.rally.target) * 100); }); });
+    maxPct = Math.ceil(maxPct / 10) * 10;
+    var tickLeft = (100 / maxPct) * 100;
+    var html = "";
+    DATA.properties.forEach(function(p0){
+      html += '<div style="margin-top:14px;"><div class="propname" style="font-weight:600; margin-bottom:6px; display:flex; align-items:center; gap:8px;"><span class="swatch" style="background:' + cv(p0.colorVar) + '"></span>' + p0.name + '</div>';
+      cycles.forEach(function(c){
+        var p = c.properties.filter(function(x){ return x.id === p0.id; })[0];
+        var pctV = (p.rally.gained / p.rally.target) * 100;
+        var live = c === DATA;
+        html += '<div class="pbar-row" style="grid-template-columns: 96px 1fr 150px;">' +
+          '<span class="plabel">' + c.cycleLabel + (live ? ' <span style="color:var(--accent-gold-strong); font-weight:600;">(live)</span>' : '') + '</span>' +
+          '<div class="pbar-track" style="height:10px; position:relative; overflow:visible;"><div class="pbar-fill" style="width:' + (pctV / maxPct * 100) + '%; background:' + cv(p0.colorVar) + '; opacity:' + (live ? 0.6 : 1) + '"></div>' +
+          '<div style="position:absolute; top:-3px; left:' + tickLeft + '%; width:2px; height:16px; background:var(--ink-muted); opacity:.7;" title="Target"></div></div>' +
+          '<span class="pbar-val num" style="text-align:left;">' + p.rally.gained + ' / ' + p.rally.target + ' &middot; ' + Math.round(pctV) + '%</span></div>';
+      });
+      html += '</div>';
+    });
+    barsEl.innerHTML = html;
+
+    var thead = '<tr><th>As of</th>' + DATA.properties.map(function(p){
+      return '<th class="propcol"><span class="propcol-inner"><span class="swatch" style="background:' + cv(p.colorVar) + '"></span>' + p.shortName + '</span></th>';
+    }).join("") + '</tr>';
+    var body = cycles.map(function(c){
+      var top = Math.max.apply(null, c.properties.map(function(p){ return p.goldenKey.points; }));
+      var live = c === DATA;
+      var cells = DATA.properties.map(function(p0){
+        var p = c.properties.filter(function(x){ return x.id === p0.id; })[0];
+        var v = p.goldenKey.points;
+        var lead = v === top;
+        var colr = v < 0 ? 'var(--crit)' : (lead && v > 0 ? 'var(--accent-gold-strong)' : 'var(--ink)');
+        return '<td><span class="ledger-rating num" style="color:' + colr + '; font-weight:' + (lead && v > 0 ? 700 : 500) + ';">' + (v > 0 ? '+' : '') + v.toFixed(1) + '</span></td>';
+      }).join("");
+      return '<tr><td class="ledger-platform">' + c.cycleLabel + (live ? ' <span class="poq">TO DATE</span>' : ' close') + '</td>' + cells + '</tr>';
+    }).join("");
+    gkEl.innerHTML = '<thead>' + thead + '</thead><tbody>' + body + '</tbody>';
+  })();
 
   function openCycleModal(cyc){
     document.getElementById("modal-cycle-label").textContent = cyc.cycleLabel;
